@@ -1,0 +1,9 @@
+import obd
+from obd import obd.protocols
+from obd.utils import bytes_to_int
+from tkinter import *
+
+#Scan for and connect to OBD USB device
+ports = obd.scan_serial()
+print ports
+connection = obd.OBD(ports[0])
